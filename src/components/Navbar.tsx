@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import DarkMode from "./DarkMode";
 
 const Navbar = () => {
   return (
@@ -10,9 +11,9 @@ const Navbar = () => {
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             className="w-10 h-10 text-white p-2 bg-rose-300 rounded-full"
             viewBox="0 0 24 24"
           >
@@ -21,25 +22,26 @@ const Navbar = () => {
           <span className="ml-3 text-xl">Min's blog</span>
         </a>
         <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
-          <a className="mr-5 hover:text-gray-900">Home</a>
-          <a className="mr-5 hover:text-gray-900">Project</a>
-          <a className="mr-5 hover:text-gray-900">게시물</a>
-          <a className="mr-5 hover:text-gray-900">연락하기</a>
+          <DarkMode />
+          <Link href="/" className="mr-5 hover:text-gray-400">
+            Home
+          </Link>
+          <Link href="/projects" className="mr-5 hover:text-gray-400">
+            Project
+          </Link>
+          <Link href="/" className="mr-5 hover:text-gray-400">
+            Blog
+          </Link>
+          <Link href="/about" className="mr-5 hover:text-gray-400">
+            About
+          </Link>
         </nav>
-        <button className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0">
-          Button
-          <svg
-            fill="none"
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            className="w-4 h-4 ml-1"
-            viewBox="0 0 24 24"
-          >
-            <path d="M5 12h14M12 5l7 7-7 7"></path>
-          </svg>
-        </button>
+        <a
+          href="https://open.kakao.com/o/gHQbzY9f"
+          className="inline-flex items-center bg-gray-100 border-0 py-1 px-3 focus:outline-none hover:bg-gray-200 rounded text-base mt-4 md:mt-0"
+        >
+          연락하기
+        </a>
       </div>
     </header>
   );

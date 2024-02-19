@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="text-gray-600 body-font">
-      <div className="bg-gray-100">
+      <div>
         <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="text-gray-500 font-bold text-sm text-center sm:text-left">
             Min's blog —
@@ -16,7 +16,7 @@ const Footer = () => {
               @ 2024 minseo - @amy3374
             </a>
           </p>
-          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
+          <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start cursor-pointer">
             <a className="text-gray-500">
               <svg
                 fill="currentColor"
