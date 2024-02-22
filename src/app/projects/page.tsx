@@ -1,6 +1,6 @@
-"use client";
 import React from "react";
 import { TOKEN, DATABASE_ID } from "../../../config";
+import ProjectItem from "@/components/projects/ProjectItem";
 
 async function getPosts() {
   const options = {
@@ -11,30 +11,41 @@ async function getPosts() {
       "Content-type": "application/json",
       Authorization: `Bearer ${TOKEN}`,
     },
-    body: JSON.stringify({ page_size: 100 }),
+    body: JSON.stringify({
+      sorts: [
+        {
+          property: "이름",
+          direction: "ascending",
+        },
+      ],
+      page_size: 100,
+    }),
   };
   const res = await fetch(
     `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
     options
   );
-  const data = await res.json();
-  console.log("Data", data);
-  // const projectId = data.results.map((project: any) => project.id);
-  // console.log(`project id : ${projectId}`);
-  // return data as any[];
-
+  const projects = await res.json();
+  const projectNames = projects?.results?.map(
+    (project: any) => project.properties.이름.title[0].plain_text
+  );
+  console.log(`project Names : ${projectNames}`);
   // return {
-  //   props: {},
+  //   props: { projectNames },
   // };
+  return projects;
 }
 
 const Projects = async () => {
-  const posts = await getPosts();
-  console.log("posts", posts);
+  const projects = await getPosts();
+  console.log("posts", projects);
 
   return (
     <div>
-      <h1>projects page</h1>
+      <h1>projects page:{projects?.results?.length}개</h1>
+      {projects?.results?.map((project: any) => (
+        <ProjectItem key={project.id} data={project} />
+      ))}
     </div>
   );
 };
