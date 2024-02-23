@@ -7,7 +7,7 @@ async function getPosts() {
     method: "POST",
     headers: {
       Accept: "application/json",
-      "Notion-Version": "2022-06-28",
+      "Notion-Version": "2022-02-22",
       "Content-type": "application/json",
       Authorization: `Bearer ${TOKEN}`,
     },
