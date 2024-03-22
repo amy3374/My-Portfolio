@@ -24,17 +24,23 @@ export async function getPosts() {
         },
       }
     );
-    console.log(response);
-    return { props: { data: response.data }, revalidate: 1 };
+    return response.data;
   } catch (error) {
     console.error(error);
+    return null;
   }
 }
+//     console.log(response);
+//     return { props: { data: response.data }, revalidate: 1 };
+//   } catch (error) {
+//     console.error(error);
+//   }
+// }
 
-const Projects = async () => {
-  const projects = await getPosts();
+const Projects = async ({ projects }: any) => {
+  // const projects = await getPosts();
 
-  console.log("posts", projects);
+  // console.log("posts", projects);
 
   return (
     <div className="container px-20 py-24 mx-auto">
