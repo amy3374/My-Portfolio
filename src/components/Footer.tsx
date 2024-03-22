@@ -8,7 +8,7 @@ const Footer = () => {
       <div>
         <div className="py-4 px-5 flex flex-wrap flex-col sm:flex-row">
           <p className="font-medium text-sm text-center sm:text-left">
-            @ 2024 Minseo's Portfolio
+            @ 2024 Minseo&apos;s Portfolio
           </p>
           <div className="flex items-center sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start cursor-pointer">
             <a href="https://github.com/amy3374" className="text-gray-500 mr-3">
