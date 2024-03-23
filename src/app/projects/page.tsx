@@ -37,10 +37,10 @@ export async function getPosts() {
 //   }
 // }
 
-const Projects = async ({ projects }: any) => {
-  // const projects = await getPosts();
+const Projects = async () => {
+  const projects = await getPosts();
 
-  // console.log("posts", projects);
+  console.log("posts", projects);
 
   return (
     <div className="container px-20 py-24 mx-auto">
@@ -48,12 +48,12 @@ const Projects = async ({ projects }: any) => {
         <h1 className="text-3xl font-bold sm:text-5xl mt-10">
           총 프로젝트 :
           <span className="text-rose-300 text-3xl font-bold sm:text-5xl text m-2">
-            {projects?.props.data.results?.length}
+            {projects?.results?.length}
           </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-10 m-6 gap-8 sm:w-full">
           {projects &&
-            projects.props.data.results.map((project: any) => (
+            projects?.results?.map((project: any) => (
               <ProjectItem key={project.id} data={project} />
             ))}
         </div>
