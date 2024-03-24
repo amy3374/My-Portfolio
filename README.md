@@ -17,7 +17,7 @@
 
 - projects 화면
   - 깃허브, 이력서, 코드 설명, 배포링크 등 프로젝트에 대한 자세한 설명 볼 수 있음
-  ![포폴](https://github.com/amy3374/My-Portfolio/assets/119571479/fb2c9585-b4a0-460f-9c21-986cd2cd6cc7)
+  ![포폴](https://github.com/amy3374/My-Portfolio/assets/119571479/fb2c9585-b4a0-460f-9c21-986cd2cd6cc7)<br/>
 
 
   
