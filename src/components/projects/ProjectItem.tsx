@@ -7,15 +7,13 @@ const ProjectItem = ({ data }: any) => {
   const title = data.properties.이름.title[0].plain_text;
   const github = data.properties?.Github?.url;
   const githubBack = data.properties?.GithubBack?.url;
-  console.log("githubBack", githubBack);
   const code = data.properties.Code?.url;
   const publish = data.properties.배포?.url;
-  console.log("배포링크", publish);
   const description = data.properties.Description.rich_text[0].plain_text;
   const workPeriod = data.properties.WorkPeriod.rich_text[0].plain_text;
   const imgSrc = data.cover.file?.url || data.cover.external.url;
   const tags = data.properties.태그.multi_select;
-  console.log("imgsrc", imgSrc);
+  // console.log("imgsrc", imgSrc);
   return (
     <div className="flex flex-col m-3 p-0 bg-white border dark:border-white shadow-lg dark:bg-black rounded-t-xl rounded-md w-full">
       <Image

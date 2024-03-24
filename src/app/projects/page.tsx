@@ -37,7 +37,7 @@ export async function getPosts() {
 //   }
 // }
 
-const Projects = async () => {
+export default async function Projects() {
   const projects = await getPosts();
 
   console.log("posts", projects);
@@ -47,7 +47,7 @@ const Projects = async () => {
       <div className="flex flex-col justify-center items-center min-h-screen mb-10 px-6">
         <h1 className="text-3xl font-bold sm:text-5xl mt-10">
           총 프로젝트 :
-          <span className="text-rose-300 text-3xl font-bold sm:text-5xl text m-2">
+          <span className="text-rose-300 dark:text-rose-300 text-3xl font-bold sm:text-5xl text m-2">
             {projects?.results?.length}
           </span>
         </h1>
@@ -62,4 +62,3 @@ const Projects = async () => {
   );
 };
 
-export default Projects;
