@@ -7,6 +7,10 @@
 <Br />
 <Br />
 
+# 배포링크
+
+[포트폴리오 보러가기](https://my-portfolio-one-mauve-14.vercel.app/)
+
 # 구현 기능 / 진행과정
 
 - 노션에 데이터 추가
@@ -16,13 +20,11 @@
 
 - projects 화면
   - 깃허브, 이력서, 코드 설명, 배포링크 등 프로젝트에 대한 자세한 설명 볼 수 있음
-  ![포폴](https://github.com/amy3374/My-Portfolio/assets/119571479/fb2c9585-b4a0-460f-9c21-986cd2cd6cc7)
+    ![포폴](https://github.com/amy3374/My-Portfolio/assets/119571479/fb2c9585-b4a0-460f-9c21-986cd2cd6cc7)
 
 <<<<<<< HEAD
-- 다크모드<br/>
-=======
 
-  
+- # 다크모드<br/>
 - DarkMode<br/>
->>>>>>> 51fd9da3a7943ceb14f345c854ccf29212966de0
-  ![다크모드](https://github.com/amy3374/My-Portfolio/assets/119571479/4d54ab80-4460-4f01-971c-977aa09b1dca)
+  > > > > > > > 51fd9da3a7943ceb14f345c854ccf29212966de0
+  > > > > > > > ![다크모드](https://github.com/amy3374/My-Portfolio/assets/119571479/4d54ab80-4460-4f01-971c-977aa09b1dca)
