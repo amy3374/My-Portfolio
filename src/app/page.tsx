@@ -66,12 +66,19 @@ const Home = () => {
         <div className="flex items-center lg:w-3/5 mx-auto border-b pb-10 mb-10 border-gray-200 sm:flex-row flex-col">
           <div className="flex-grow sm:text-left text-center mt-6 sm:mt-0 pl-3">
             <p className="leading-relaxed text-slate-900 font-semibold dark:font-medium text-md">
-              저는 개발자로서 새로운 것을 배우는 것에 대한 도전을 두려워하지
-              않습니다. 새로운 기술을 배우고 그것을 실제로 적용해보며 다양한
-              프로젝트를 구상하고 구현하는 과정이 제게 큰 즐거움을 줍니다.
-              이처럼 항상 배움에 있어 열려있는 태도는 저의 가장 큰 강점이라고
-              생각합니다. 또한, 최신 기술 트렌드를 적극적으로 받아들여
-              프로젝트에서도 좋은 결과를 이끌어낼 수 있다고 확신합니다.😊😊
+              안녕하세요 신입 프론트엔드 개발자 김민서 입니다.
+              <br />
+              저는 React,Redux,TypeScript,TailwindCss 등 프론트엔드에서 주로
+              다루는 기술 뿐만 아니라 NodeJs,MongoDB등의 백엔드 기술을 이용한 팀
+              프로젝트 경험도 있습니다. 또한 NextJs를 익혀 저만의 포트폴리오를
+              만들며, 저의 개발 실력을 향상시키려 노력하였습니다. <br />
+              위와 같이 저는 개발자로서 새로운 것을 배우는 것에 대한 도전을
+              두려워하지 않습니다. 새로운 기술을 배우고 그것을 실제로 적용해보며
+              다양한 프로젝트를 구상하고 구현하는 과정이 제게 큰 즐거움을
+              줍니다. 이처럼 항상 배움에 있어 열려있는 태도는 저의 가장 큰
+              강점이라고 생각합니다. 또한, 최신 기술 트렌드를 적극적으로
+              받아들여 프로젝트에서도 좋은 결과를 이끌어낼 수 있다고
+              확신합니다.😊😊
               <br />
               <a
                 href="https://www.notion.so/e503cd64335d49f9a84357ca97f13655"
