@@ -2,7 +2,7 @@ import axios from "axios";
 import { TOKEN, DATABASE_ID } from "../../../config";
 import ProjectItem from "@/components/projects/ProjectItem";
 
-export async function getPosts() {
+async function getPosts() {
   try {
     const response = await axios.post(
       `https://api.notion.com/v1/databases/${DATABASE_ID}/query`,
@@ -30,12 +30,12 @@ export async function getPosts() {
     return null;
   }
 }
-//     console.log(response);
-//     return { props: { data: response.data }, revalidate: 1 };
-//   } catch (error) {
-//     console.error(error);
-//   }
-// }
+// //     console.log(response);
+// //     return { props: { data: response.data }, revalidate: 1 };
+// //   } catch (error) {
+// //     console.error(error);
+// //   }
+// // }
 
 export default async function Projects() {
   const projects = await getPosts();
@@ -60,5 +60,4 @@ export default async function Projects() {
       </div>
     </div>
   );
-};
-
+}
