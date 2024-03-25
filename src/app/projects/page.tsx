@@ -24,18 +24,17 @@ async function getPosts() {
         },
       }
     );
-    return response.data;
+    //   return response.data;
+    // } catch (error) {
+    //   console.error(error);
+    //   return null;
+    // }
+    // }
+    return { props: { data: response.data }, revalidate: 1 };
   } catch (error) {
     console.error(error);
-    return null;
   }
 }
-// //     console.log(response);
-// //     return { props: { data: response.data }, revalidate: 1 };
-// //   } catch (error) {
-// //     console.error(error);
-// //   }
-// // }
 
 export default async function Projects() {
   const projects = await getPosts();
@@ -48,12 +47,12 @@ export default async function Projects() {
         <h1 className="text-3xl font-bold sm:text-5xl mt-10">
           총 프로젝트 :
           <span className="text-rose-300 dark:text-rose-300 text-3xl font-bold sm:text-5xl text m-2">
-            {projects?.results?.length}
+            {projects?.props.data.results?.length}
           </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-10 m-6 gap-8 sm:w-full">
           {projects &&
-            projects?.results?.map((project: any) => (
+            projects?.props.data.results?.map((project: any) => (
               <ProjectItem key={project.id} data={project} />
             ))}
         </div>
