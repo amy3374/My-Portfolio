@@ -11,21 +11,12 @@ const ProjectItem = ({ data }: any) => {
   const publish = data.properties.배포?.url;
   const description = data.properties.Description.rich_text[0].plain_text;
   const workPeriod = data.properties.WorkPeriod.rich_text[0].plain_text;
-  const imgSrc = data.cover.file?.url || data.cover.external.url;
+  const imgSrc = data.properties.coverImg.rich_text[0].plain_text;
   const tags = data.properties.태그.multi_select;
-  // console.log("imgsrc", imgSrc);
+  console.log("imgsrc", imgSrc);
   return (
     <div className="flex flex-col m-3 p-0 bg-white border dark:border-white shadow-lg dark:bg-black rounded-t-xl rounded-md w-full">
-      <Image
-        className="rounded-t-xl h-16"
-        alt="cover-image"
-        width={100}
-        height={50}
-        layout="responsive"
-        objectFit={`none`}
-        quality={100}
-        src={imgSrc}
-      />
+      <img src={imgSrc} className="rounded-t-xl h-56 w-full" />
       <div className="flex flex-col justify-center p-4 border-t dark:border-white">
         <div className="flex justify-between mb-2">
           <h1 className="text-2xl font-bold">{title}</h1>
