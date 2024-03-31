@@ -27,12 +27,6 @@ const Navbar = () => {
             Project
           </Link>
         </nav>
-        <a
-          href="https://open.kakao.com/o/gHQbzY9f"
-          className="inline-flex items-center bg-gray-200 dark:text-black border-0 py-1 px-3 focus:outline-none rounded mt-4 md:mt-0"
-        >
-          연락하기
-        </a>
       </div>
     </header>
   );
